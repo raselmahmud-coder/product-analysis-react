@@ -1,0 +1,10 @@
+.red{
+    color: red;
+    background: #000;
+}
+.active{
+    background: rgb(105, 134, 247);
+    color: aliceblue;
+    padding: 7px 9px;
+    border-radius: 5px;
+}

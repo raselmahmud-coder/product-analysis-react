@@ -1,0 +1,22 @@
+[
+    {
+      "id": "62495a3b82a7bf1e26000e61",
+      "picture": "https://images.unsplash.com/photo-1589779255718-3c459da9ffeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZWxlY3Ryb25pYyUyMGRldmljZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+      "name": "electronics"
+    },
+    {
+      "id": "62495a3b3a423e80ce9251a0",
+      "picture": "https://images.unsplash.com/photo-1572545884955-6f3d7b6540a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGpld2VsZXJ5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
+      "name": "jewelery"
+    },
+    {
+      "id": "62495a3be143ef51fc6b9786",
+      "picture": "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWVuJ3MlMjBjbG90aGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+      "name": "men's clothing"
+    },
+    {
+      "id": "62495a3bc9ef48b17b165b84",
+      "picture": "https://images.unsplash.com/photo-1523194258983-4ef0203f0c47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29tZW4ncyUyMGNsb3RoaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
+      "name": "women's clothing"
+    }
+  ]
