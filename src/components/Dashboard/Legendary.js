@@ -8,7 +8,6 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-import { useChart } from "../../hooks/useProducts";
 
 const data = [
   {
