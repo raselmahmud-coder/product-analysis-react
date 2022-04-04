@@ -2,7 +2,6 @@ import React from "react";
 
 const HomePageReview = (props) => {
   const { comment, userName, picture, rating } = props.review;
-  console.log("from customer review", comment);
   return (
     <div className="my-2 px-2 flex justify-center w-full overflow-hidden sm:my-2 sm:px-2 xl:my-2 xl:px-2 xl:w-1/3">
       <div className="max-w-sm bg-blue-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
