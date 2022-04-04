@@ -1,23 +1,26 @@
 import { useEffect, useState } from "react";
 // for products hook
 const useProducts = () => {
-  const [products, setProducts] = useState([]);
+  const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("https://raw.githubusercontent.com/raselmahmud22/userReviewData/main/review.json")
+    fetch(
+      "https://raw.githubusercontent.com/raselmahmud22/userReviewData/main/review.json"
+    )
       .then((res) => res.json())
-      .then((json) => setProducts(json));
+      .then((json) => setReviews(json));
   }, []);
-  return [products, setProducts];
+  return [reviews, setReviews];
 };
-// for Categories hook
-const useCategory = () => {
-  const [categories, setCategories] = useState([]);
+// for rechart
+const useChart = () => {
+  const [chart, setChart] = useState([]);
   useEffect(() => {
-    fetch(`Utilities/Categories.json`)
+    fetch(
+      "https://raw.githubusercontent.com/ProgrammingHero1/product-analysis-website/main/data.json"
+    )
       .then((res) => res.json())
-      .then((data) => setCategories(data));
+      .then((data) => setChart(data));
   }, []);
-  return [categories, setCategories];
+  return [chart, setChart];
 };
-
-export { useProducts, useCategory };
+export { useProducts, useChart };

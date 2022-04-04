@@ -9,17 +9,12 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { useChart } from "../../hooks/useProducts";
+import Legendary from "./Legendary";
+import MyShape from "./renderActiveShape";
 
 const DashBoard = () => {
-  const [chart, setChart] = useState([]);
-  useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/ProgrammingHero1/product-analysis-website/main/data.json"
-    )
-      .then((res) => res.json())
-      .then((data) => setChart(data));
-  }, []);
-  // custom circle chart
+  const [chart] = useChart();
   return (
     <>
       <div className="flex flex-wrap overflow-hidden xl:mx-4">
@@ -50,7 +45,8 @@ const DashBoard = () => {
           </ResponsiveContainer>
         </div>
         <div className="w-full overflow-hidden xl:my-4 xl:px-4 xl:w-1/2">
-          <LineChart width={400} height={400} data={chart}>
+          <h1 className="text-center text-3xl font-semibold">Line Chart</h1>
+          <LineChart width={600} height={400} data={chart}>
             <Line dataKey={"sell"} />
             <Line dataKey={"revenue"} />
             <Line dataKey={"investment"} />
@@ -58,6 +54,13 @@ const DashBoard = () => {
             <YAxis dataKey={"sell"} />
             <Tooltip />
           </LineChart>
+        </div>
+        <div className="w-full overflow-hidden xl:my-8 xl:px-4 xl:w-1/2">
+      <Legendary />
+        </div>
+        <div className="w-full overflow-hidden xl:my-8 xl:px-4 xl:w-1/2">
+      <MyShape/>
+
         </div>
       </div>
     </>
