@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://raw.githubusercontent.com/raselmahmud22/fakeData/main/fakeData.json")
+    fetch("https://raw.githubusercontent.com/raselmahmud22/userReviewData/main/review.json")
       .then((res) => res.json())
       .then((json) => setProducts(json));
   }, []);
