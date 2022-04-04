@@ -1,10 +1,11 @@
 import React from "react";
 import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Legend,
   Line,
   LineChart,
-  Pie,
-  PieChart,
-  ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
@@ -19,33 +20,38 @@ const DashBoard = () => {
     <>
       <div className="flex flex-wrap overflow-hidden xl:mx-4">
         <div className="w-full overflow-hidden xl:my-4 xl:px-4 xl:w-1/2">
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart width={400} height={400}>
-              <Pie
-                dataKey="sell"
-                isAnimationActive={false}
-                data={chart}
-                cx="50%"
-                cy="50%"
-                outerRadius={80}
-                fill="#8884d8"
-                label
-              />
-              <Pie
-                dataKey="revenue"
-                data={chart}
-                cx={500}
-                cy={200}
-                innerRadius={40}
-                outerRadius={80}
-                fill="#82ca9d"
-              />
-              <Tooltip />
-            </PieChart>
-          </ResponsiveContainer>
+          <h1 className="text-center lg:text-3xl font-semibold">
+            Sell VS Revenue
+          </h1>
+          <BarChart
+            width={500}
+            height={300}
+            data={chart}
+            margin={{
+              top: 5,
+              right: 20,
+              left: 20,
+              bottom: 5,
+            }}
+            barSize={10}
+          >
+            <XAxis
+              dataKey="month"
+              scale="point"
+              padding={{ left: 5, right: 5 }}
+            />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <CartesianGrid strokeDasharray="3 3" />
+            <Bar dataKey="sell" fill="#8884d8" background={{ fill: "#8884d8" }} />
+            <Bar dataKey="revenue" fill="#ed82ea"/>
+          </BarChart>
         </div>
         <div className="w-full overflow-hidden xl:my-4 xl:px-4 xl:w-1/2">
-          <h1 className="text-center text-3xl font-semibold">Line Chart</h1>
+          <h1 className="text-center lg:text-3xl font-semibold">
+            Sell VS Revenue VS Investment
+          </h1>
           <LineChart width={600} height={400} data={chart}>
             <Line dataKey={"sell"} />
             <Line dataKey={"revenue"} />
@@ -56,11 +62,10 @@ const DashBoard = () => {
           </LineChart>
         </div>
         <div className="w-full overflow-hidden xl:my-8 xl:px-4 xl:w-1/2">
-      <Legendary />
+          <Legendary />
         </div>
         <div className="w-full overflow-hidden xl:my-8 xl:px-4 xl:w-1/2">
-      <MyShape/>
-
+          <MyShape />
         </div>
       </div>
     </>
