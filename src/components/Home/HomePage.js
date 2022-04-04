@@ -2,6 +2,7 @@ import { useCategory } from "../../hooks/useProducts";
 import CustomerReview from "../CustomerReview/CustomerReview";
 const HomePage = () => {
   const [categories] = useCategory();
+  //https://randomuser.me/api/?results=10
   return (
     <>
       <div className="mt-20 flex flex-wrap items-center mx-2 overflow-hidden sm:mx-2 xl:mx-2">
