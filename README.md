@@ -4,7 +4,7 @@
 ### [Code Link](https://github.com/programming-hero-web-course-4/product-analysis-website-raselmahmud22)
 
 ## Available Scripts
-
+*I use reChart latest version
 * Best Airpods you may find
 * using customs hooks 
 * I use react router v6

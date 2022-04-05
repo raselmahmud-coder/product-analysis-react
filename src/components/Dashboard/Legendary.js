@@ -8,45 +8,7 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-
-const data = [
-  {
-    month: "Mar",
-    investment: 100000,
-    sell: 241,
-    revenue: 10401,
-  },
-  {
-    month: "Apr",
-    investment: 200000,
-    sell: 423,
-    revenue: 24500,
-  },
-  {
-    month: "May",
-    investment: 500000,
-    sell: 726,
-    revenue: 67010,
-  },
-  {
-    month: "Jun",
-    investment: 500000,
-    sell: 529,
-    revenue: 40405,
-  },
-  {
-    month: "Jul",
-    investment: 600000,
-    sell: 601,
-    revenue: 50900,
-  },
-  {
-    month: "Aug",
-    investment: 700000,
-    sell: 670,
-    revenue: 61000,
-  },
-];
+import { useChart } from "../../hooks/useProducts";
 
 const Legendary = () => {
   const [opacity, setOpacity] = useState({
@@ -70,12 +32,13 @@ const Legendary = () => {
     },
     [opacity, setOpacity]
   );
+  const [charts] = useChart();
   return (
     <>
       <LineChart
         width={500}
         height={300}
-        data={data}
+        data={charts}
         margin={{
           top: 5,
           right: 30,
@@ -100,8 +63,8 @@ const Legendary = () => {
         />
         <Line
           type="monotone"
-          dataKey="sell"
-          strokeOpacity={opacity.sell}
+          dataKey="investment"
+          strokeOpacity={opacity.investment}
           stroke="#82ca9d"
         />
       </LineChart>

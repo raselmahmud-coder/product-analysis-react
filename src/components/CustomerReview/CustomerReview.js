@@ -37,7 +37,7 @@ const CustomerReview = () => {
           className="lg:hover:bg-blue-800 bg-black p-3 rounded-lg text-2xl my-4 text-white uppercase"
           onClick={() => navigate("/review")}
         >
-          <span>all review</span>
+          <span>See all review</span>
         </button>
       </div>
     </>

@@ -124,7 +124,7 @@ export default function MyShape() {
   );
 
   return (
-    <PieChart width={400} height={400}>
+    <PieChart width={800} height={800}>
       <Pie
         activeIndex={activeIndex}
         activeShape={renderActiveShape}
